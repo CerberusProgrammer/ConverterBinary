@@ -1,0 +1,16 @@
+.mat-card {
+    text-align: center;
+}
+
+.content-wrapper {
+    padding: 2%;
+}
+
+#convert-button {
+    display: table-cell;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+}
