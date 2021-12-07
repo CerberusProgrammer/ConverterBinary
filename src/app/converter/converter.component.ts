@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-converter',
@@ -7,8 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConverterComponent {
 
-  text: string = 'qw';
+  text: string = '';
+  binary: string = '';
 
-  textoDeInput: string = 'null';
+  convertTextToBinary(string: string) {
+    this.binary = '';
 
+    for (var i = 0; i < string.length; i++)
+      this.binary += string[i].charCodeAt(0).toString(2) + " ";
+  }
+
+  convertBinaryToText(string: string) {
+    var binString = '';
+
+    string.split(' ').map(function(bin) {
+        binString += String.fromCharCode(parseInt(bin, 2));
+      });
+      
+    this.text = binString;
+  }
 }

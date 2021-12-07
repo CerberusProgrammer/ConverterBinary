@@ -9,6 +9,7 @@
 #convert-button {
     display: table-cell;
     width: 100%;
+    padding: 2%;
 }
 
 body {

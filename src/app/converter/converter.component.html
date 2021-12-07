@@ -5,27 +5,30 @@
         <form class="example-form">
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Write something</mat-label>
-                <input [(ngModel)]='textoDeInput' type="text" matInput placeholder="Ex. Pizza">
+                <input matInput #inputText value="{{text}}" type="text">
             </mat-form-field>
         </form>
     </mat-card>
 </div>
 
-<button  *ngIf='textoDeInput' class="btn btn-outline-secondary" type="button">Aqui toy</button>
-<input [(ngModel)]='textoDeInput' type="text" class="form-control">
-<p>Valor variable: {{textoDeInput}}</p>
+<div id="convert-button">
+    <button mat-raised-button (click)="convertTextToBinary(inputText.value)" type="button" color="primary">
+        Convert Text to Binary
+    </button>
+</div>
 
 <div id="convert-button">
-    <button mat-raised-button type="button" *ngIf="text" color="primary">Convert</button>
+    <button mat-raised-button (click)="convertBinaryToText(inputBinary.value)" type="button" color="primary">
+        Convert Binary to text
+    </button>
 </div>
 
 <div class="content-wrapper">
     <mat-card>
         <mat-card-title>Binary</mat-card-title>
-
-        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-form-field appearance="fill">
             <mat-label>Write something</mat-label>
-            <input matInput placeholder="Ex. Pizza">
+            <input matInput #inputBinary value="{{binary}}" type="text">
         </mat-form-field>
     </mat-card>
 </div>
