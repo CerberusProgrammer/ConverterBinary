@@ -9,10 +9,9 @@ npm install
 npm ci
 ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
 Then run:
 ```bash
+ng build
 npx electron .
 ```
 
