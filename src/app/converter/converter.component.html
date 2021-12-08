@@ -1,33 +1,45 @@
 <div class="content-wrapper">
     <mat-card>
         <mat-card-title>Alphabet</mat-card-title>
-            <mat-form-field appearance="fill">
-                <mat-label>Write something</mat-label>
-                <input matInput #inputText value="{{text}}" type="text">
-            </mat-form-field>
+
+        <button mat-icon-button (click)="copyText()" class="copy-btn-left" matTooltip="Copy">
+            <mat-icon>content_copy</mat-icon>
+        </button>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Write something</mat-label>
+            <input matInput #inputText [(ngModel)]="text" type="text" placeholder="Hello world!">
+        </mat-form-field>
+
+        <button mat-icon-button class="copy-btn-right" matTooltip="Clear" (click)="cleanText()">
+            <mat-icon>format_clear</mat-icon>
+        </button>
+
+        <button mat-raised-button (click)="convertTextToBinary(inputText.value)" type="button" color="primary">
+            Convert Text to Binary
+        </button>
     </mat-card>
-</div>
-
-<div class="converter-button">
-    <button mat-raised-button 
-    (click)="convertTextToBinary(inputText.value)" 
-    type="button" color="primary">
-        Convert Text to Binary
-    </button>
-
-    <button mat-raised-button 
-    (click)="convertBinaryToText(inputBinary.value)"
-    type="button" color="primary">
-        Convert Binary to text
-    </button>
 </div>
 
 <div class="content-wrapper">
     <mat-card>
         <mat-card-title>Binary</mat-card-title>
+
+        <button mat-icon-button (click)="copyBinary()" class="copy-btn-left" matTooltip="Copy">
+            <mat-icon>content_copy</mat-icon>
+        </button>
+
         <mat-form-field appearance="fill">
-            <mat-label>Write something</mat-label>
-            <input matInput #inputBinary value="{{binary}}" type="text">
+            <mat-label>Write something in binary</mat-label>
+            <input matInput #inputBinary [(ngModel)]="binary" type="text" placeholder="1001000 1100101 1101100 1101100 1101111">
         </mat-form-field>
+
+        <button mat-icon-button (click)="cleanBinary()" type="button" class="copy-btn-right" matTooltip="Clear">
+            <mat-icon>format_clear</mat-icon>
+        </button>
+
+        <button mat-raised-button (click)="convertBinaryToText(inputBinary.value)" type="button" color="primary">
+            Convert Binary to text
+        </button>
     </mat-card>
 </div>

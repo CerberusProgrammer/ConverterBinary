@@ -13,6 +13,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ConverterComponent } from './converter/converter.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { ConverterComponent } from './converter/converter.component';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDividerModule,
+    MatSnackBarModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

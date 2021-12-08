@@ -14,10 +14,18 @@
     width: 80%;
 }
 
-#convert-button {
+.converter-button {
     padding: 1%;
 }
 
-.converter-button {
-    padding: 1%;
+.copy-btn-left {
+    position: absolute;
+    top: 35%;
+    left: 2.5%;
+}
+
+.copy-btn-right {
+    position: absolute;
+    top: 35%;
+    right: 2.5%;
 }
