@@ -10,6 +10,7 @@ createWindow = () => {
         width: 451,
         height: 400,
         frame: false,
+        icon: "ic_transform_128_28811.ico",
         //titleBarStyle: "hidden",
         webPreferences: {
             preload: path.join(__dirname, "preload.js"),
