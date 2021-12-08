@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <span>{{title}}</span>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button
+    (click)="minimizeApplication()">
+      <mat-icon>minimize</mat-icon>
+    </button>
+    <button mat-icon-button
+    (click)="closeApplication()">
+      <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

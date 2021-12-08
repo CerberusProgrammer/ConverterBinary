@@ -3,15 +3,21 @@
 }
 
 .content-wrapper {
-    padding: 2%;
+    padding: 1%;
+}
+
+.mat-card-title {
+    padding: 1%;
+}
+
+.mat-form-field {
+    width: 80%;
 }
 
 #convert-button {
-    display: table-cell;
-    width: 100%;
-    padding: 2%;
+    padding: 1%;
 }
 
-body {
-    background-color: black;
+.converter-button {
+    padding: 1%;
 }
